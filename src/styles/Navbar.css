@@ -7,12 +7,17 @@
     left: 0;
     width: 100%;
     align-items: center;
-    border-bottom: 1px solid #ff50d0;
+    border-bottom: 1px solid #f2f2f2;
     z-index: 10;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    overflow: hidden;
+    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);;
 }
 
 .logo {
-    height: 50px;
+    height: 150px;
     left: 5%;
     cursor: pointer;
 }
@@ -28,31 +33,34 @@
     position: relative; 
     text-decoration: none;
     font-size: 16px;
-    padding: 0 30px;
-    color: #ff50d0;
+    padding: 7.5px 30px;
+    color: black;
     font-weight: 500;
-    transition: all 0.3s;
+    transition: all 1s;
 }
 
 .navbar .login {
     border: 1px solid #ff50d0;
     background-color: transparent;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 7.5px 18.75px;
+    border-radius: 15px;
     color: #ff50d0;
+    font-size: 16px;
     margin: 0 30px;
     cursor: pointer;
 }
 
-.navbar .login:hover{
-    background-color: #ff50d0;
-    color: #f2f2f2;
+.navbar .login:hover {
     transition: all .3s ease;
+    color: white;
+    box-shadow: 
+        inset 0px 0px 25px 5px #ff50d0, 
+        inset 0px 0px 25px 5px #ff50d0; 
 }
 
 .navbar .links .account, .navbar .links .purse {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: auto;
 }
 
 .navbar .links:not(:has(.account)):not(:has(.purse)):before,

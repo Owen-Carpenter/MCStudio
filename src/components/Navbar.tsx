@@ -5,7 +5,7 @@ function Navbar() {
   return <>
     <section className="navbar-container">
         <div className="logo-section">
-            <a href=""><img src="/assets/mcstudioLogo.png" alt="" className="logo" /></a>
+            <a href=""><img src="/public/assets/mcstudioLogo.png" alt="" className="logo" /></a>
         </div>
         <nav className="navbar">
             <Link className="links" to={"/"}>Home</Link>
@@ -17,7 +17,6 @@ function Navbar() {
                 <button className="login">Login</button>
             </Link>
             <Link className="links" to={"/Purse"}><img src="/assets/purse.png" alt="" className="purse" /></Link>
-            <Link className="links" to={"/Account"}><img src="/assets/woman.png" alt="" className="account" /></Link>
         </nav>
     </section>
   </>;
