@@ -1,0 +1,83 @@
+.navbar-container {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #ff50d0;
+    z-index: 10;
+}
+
+.logo {
+    height: 50px;
+    left: 5%;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    align-items: center;
+}
+
+.navbar .links {
+    position: relative; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 30px;
+    color: #ff50d0;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navbar .login {
+    border: 1px solid #ff50d0;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ff50d0;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.navbar .login:hover{
+    background-color: #ff50d0;
+    color: #f2f2f2;
+    transition: all .3s ease;
+}
+
+.navbar .links .account, .navbar .links .purse {
+    height: 25px;
+    width: 25px;
+}
+
+.navbar .links:not(:has(.account)):not(:has(.purse)):before,
+.navbar .links:not(:has(.account)):not(:has(.purse)):after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 1px;
+    content: '';
+    background: #ff50d0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:not(:has(.account)):not(:has(.purse)):before {
+    left: 0;
+    top: 0;
+}
+
+.navbar a:not(:has(.account)):not(:has(.purse)):after {
+    right: 0;
+    bottom: 0;
+}
+
+.navbar a:not(:has(.account)):not(:has(.purse)):hover:before,
+.navbar a:not(:has(.account)):not(:has(.purse)):hover:after {
+    opacity: 1;
+    width: 100%;
+}
