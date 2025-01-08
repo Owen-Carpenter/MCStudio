@@ -1,11 +1,10 @@
 .navbar-container {
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #f2f2f2;
     z-index: 10;
@@ -13,7 +12,30 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); 
     overflow: hidden;
+    height: 7.5vh;
+    transition: height .3s ease-in-out;
     box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);;
+}
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.5vh;
+    padding: 0 20px;
+    z-index: 15;
+    width: 100%;
+    position: relative;
+}
+
+.top-bar-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-section{
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -39,7 +61,7 @@
     transition: all 1s;
 }
 
-.navbar .login {
+.login {
     border: 1px solid #ff50d0;
     background-color: transparent;
     padding: 7.5px 18.75px;
@@ -58,13 +80,17 @@
         inset 0px 0px 25px 5px #ff50d0; 
 }
 
-.navbar .links .account, .navbar .links .purse {
+.purse {
     height: 35px;
     width: auto;
 }
 
-.navbar .links:not(:has(.account)):not(:has(.purse)):before,
-.navbar .links:not(:has(.account)):not(:has(.purse)):after {
+.top-bar .purse, .top-bar .login{
+    display: none;
+}
+
+.navbar .links:not(:has(.purse)):before,
+.navbar .links:not(:has(.purse)):after {
     position: absolute;
     opacity: 0;
     width: 0%;
@@ -88,4 +114,47 @@
 .navbar a:not(:has(.account)):not(:has(.purse)):hover:after {
     opacity: 1;
     width: 100%;
+}
+
+.navbar-container .menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #ff50d0;
+}
+
+@media (max-width: 1024px) {
+    .navbar-container .menu{
+        display: block;
+    }
+
+    .navbar .purse, .navbar .login{
+        display: none;
+    }
+
+    .navbar{
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar.open{
+        display: flex;
+    }
+
+    .navbar .links{
+        padding: 10px 0;
+    }
+
+    .navbar-container.expanded{
+        height: 290px;
+        flex-direction: column;
+    }
+
+    .menu{
+        padding-left: 20px;
+    }
+
+    .top-bar .purse, .top-bar .login{
+        display: flex;
+    }
 }
