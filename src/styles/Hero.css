@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-img {
@@ -84,3 +85,20 @@
 .hero-btn:hover::before {
     left: 0; 
 }
+
+@media (max-width: 1024px) {
+    .hero-container{
+        height: auto;
+        padding-bottom: 25px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-img{
+        object-position: right center;
+    }
+
+    .hero-buffer{
+        flex: 0;
+    }
+}
+

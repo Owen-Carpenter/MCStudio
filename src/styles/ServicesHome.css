@@ -1,0 +1,6 @@
+.services-container{
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    background-color: #ff50d0d0;
+}

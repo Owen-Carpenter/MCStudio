@@ -1,0 +1,8 @@
+.service-card{
+    height: 70%;
+    width: 100%;
+    margin: 25px;
+    background: #f2f2f2;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}

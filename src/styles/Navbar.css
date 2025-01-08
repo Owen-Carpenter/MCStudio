@@ -14,7 +14,7 @@
     overflow: hidden;
     height: 7.5vh;
     transition: height .3s ease-in-out;
-    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);;
+    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
 }
 .top-bar{
     display: flex;
