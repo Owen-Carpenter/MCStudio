@@ -2,6 +2,9 @@ import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import ServicesHome from "../components/ServicesHome"
 import HomeAbout from "../components/HomeAbout"
+import HomeGallery from "../components/HomeGallery"
+import HomeSchedule from "../components/HomeSchedule"
+import HomeReviews from "../components/HomeReviews"
 
 export function Home(){
     return(
@@ -10,6 +13,9 @@ export function Home(){
             <Hero/>
             <ServicesHome />
             <HomeAbout />
+            <HomeGallery />
+            <HomeSchedule />
+            <HomeReviews />
         </>
     )
 }

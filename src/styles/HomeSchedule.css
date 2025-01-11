@@ -1,0 +1,23 @@
+.schedule-container{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.hours-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 20s slide infinite linear;
+    white-space: nowrap;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,45 @@
+.review-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f2;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.35);
+    margin: 10px;
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-text h4{
+    color: #ff50d0;
+}
+
+.icon{
+    overflow: hidden;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img{
+    height: 50px;
+    width: 50px;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stars{
+    color: #ff50d0;
+}

@@ -1,0 +1,21 @@
+.hours-card{
+    padding: 0px 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hours-card h1{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ff50d0;
+}
+
+.hours-card h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+}

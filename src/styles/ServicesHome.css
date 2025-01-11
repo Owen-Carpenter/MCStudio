@@ -7,6 +7,7 @@
     background-size: 400%;
     animation: backanim 10s infinite;
     box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #f2f2f2;
 }
 
 .card-container {
