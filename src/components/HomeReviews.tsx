@@ -19,21 +19,18 @@ function HomeReviews(){
                         age = '2 weeks ago'
                         desc = 'I just love Makayla and always look forward to my visits with her. Her work is awesome !!'
                         stars = {5}
-                        plat = 'google'
                     />
                     <ReviewCard 
                         name = 'Gwen Johns'
                         age = '2 weeks ago'
                         desc = 'I just love Makayla and always look forward to my visits with her. Her work is awesome !!'
                         stars = {4}
-                        plat = 'google'
                     />
                     <ReviewCard 
                         name = 'Gwen Johns'
                         age = '2 weeks ago'
                         desc = 'I just love Makayla and always look forward to my visits with her. Her work is awesome !!'
                         stars = {3}
-                        plat = 'google'
                     />
                     <button className="arrow-icon">
                         <FontAwesomeIcon icon={faAngleRight} />

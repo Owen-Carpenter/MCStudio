@@ -53,6 +53,7 @@
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: box-shadow .3s ease;
 }
 
 .arrow-icon:hover{

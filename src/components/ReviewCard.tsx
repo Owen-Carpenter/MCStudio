@@ -1,7 +1,7 @@
 import '../styles/ReviewsCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function ReviewCard({ name, age, desc, stars, plat}: { name: string; age: string; desc: string; stars: number; plat: string}){
+function ReviewCard({ name, age, desc, stars}: { name: string; age: string; desc: string; stars: number}){
     
     const totalStars = 5;
     const filledStars = Array.from({ length: stars }, (_, i) => (
@@ -20,7 +20,7 @@ function ReviewCard({ name, age, desc, stars, plat}: { name: string; age: string
                         <h4>{age}</h4>
                     </div>
                     <div className="icon">
-                        <img src="/public/assets/location-pin.png" alt="" />
+                        <img src="/public/assets/google.webp" alt="" />
                     </div>
                 </div>
                 <div className="content-container">
