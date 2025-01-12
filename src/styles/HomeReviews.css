@@ -39,6 +39,12 @@
     align-items: center;
 }
 
+.review-card-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
 .arrow-icon{
   cursor: pointer;
   color: #ff50d0;

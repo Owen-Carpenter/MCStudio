@@ -20,7 +20,7 @@ function ReviewCard({ name, age, desc, stars}: { name: string; age: string; desc
                         <h4>{age}</h4>
                     </div>
                     <div className="icon">
-                        <img src="/public/assets/google.webp" alt="" />
+                        <img src="/public/assets/facebook-icon.png" alt="" />
                     </div>
                 </div>
                 <div className="content-container">
