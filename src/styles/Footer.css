@@ -1,0 +1,122 @@
+.footer-container{
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding: 50px 0px;
+    overflow: hidden;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.info-container .info-img{
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+}
+
+.info-container .logo {
+    object-fit: cover;
+    width: 100px; 
+    height: auto; 
+}
+.login-btn, .sign-up-btn {
+    margin: 10px 0px;
+    flex: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: none;
+    border: 1px solid #ff50d0;
+    font-weight: 500;
+    color: #ff50d0;
+    background: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.login-btn::before, .sign-up-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff50d0; 
+    transition: left 0.3s ease;
+    z-index: -1; 
+}
+
+.login-btn:hover, .sign-up-btn:hover {
+    color: white; 
+}
+
+.login-btn:hover::before, .sign-up-btn:hover::before {
+    left: 0; 
+}
+
+.socials-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socials-icons {
+    padding-top: 10px;
+    font-size: 25px;
+    color: black; 
+    margin: 0 10px; 
+    cursor: pointer;
+}
+
+.menu-container, .service-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container h1{
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ff50d0;
+    padding-bottom: 10px;
+}
+
+.links{
+    padding: 5px 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.links:hover{
+    text-decoration: underline;
+}
+
+.connect-container .phone{
+    padding-top: 10px;
+}
+
+.connect-container .phone, .connect-container .email{
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff50d0;
+}
+
+@media (max-width: 1024px) {
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container h1{
+        padding-top: 15px;
+    }
+}

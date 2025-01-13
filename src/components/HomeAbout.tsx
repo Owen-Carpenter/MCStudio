@@ -15,7 +15,14 @@ function HomeAbout(){
                 <h4>We're a Conway based esthetician, offering a variety of services including: lashes, brows, waxing, facial, and skin services.</h4>
                 <div className="location">
                     <img src="/public/assets/location-pin.png" alt="" className="icon" />
-                    <h3>278 U.S. 65 Suite C, Conway, AR 72032</h3>
+                    <a 
+                        className="links" 
+                        href="https://www.google.com/maps/place/278+US-65+suite+c,+Conway,+AR+72032/data=!4m2!3m1!1s0x87d2816c09cfa053:0xda2854b9851be3d5?sa=X&ved=1t:242&ictx=111" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        278 U.S. 65 Suite C, Conway, AR 72032
+                    </a>
                 </div>
             </div>
         </section>
