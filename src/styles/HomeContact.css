@@ -5,8 +5,6 @@
     justify-content: space-around;
     align-items: center;
     padding: 50px;
-    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
-    border-bottom: 3px solid #ff50d0;
 }
 
 .contact-img {
