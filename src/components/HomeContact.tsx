@@ -1,4 +1,6 @@
 import '../styles/HomeContact.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faMessage, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 function HomeContact(){
     return(
@@ -14,7 +16,10 @@ function HomeContact(){
                     <button className="submit-btn">Submit</button>
                 </div>
                 <div className="contact-img">
-                    <img src="/public/assets/contact-clipart.png" alt="" />
+                    <FontAwesomeIcon icon={faQuoteLeft} className='icon'/>
+                    <FontAwesomeIcon icon={faPhone} className='icon'/>
+                    <FontAwesomeIcon icon={faMessage} className='icon'/>
+                    <FontAwesomeIcon icon={faQuoteRight} className='icon'/>
                 </div>
             </section>
         </>

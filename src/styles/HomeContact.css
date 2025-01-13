@@ -7,19 +7,76 @@
     padding: 50px;
 }
 
-.contact-img{
+.contact-img {
+    position: relative;
     flex: 1;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 100px;
 }
 
-.contact-img img{
-    height: 400px;
-    width: auto;
-    
+.contact-img .icon {
+    position: absolute;
+    font-size: 50px; /* Adjust size as needed */
+    color: white;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
+    background-size: 1000%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out; /* Floating animation */
 }
+
+/* Define unique starting positions for each icon */
+.contact-img .icon:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    padding: 10px;
+    animation-delay: 0s;
+}
+
+.contact-img .icon:nth-child(2) {
+    top: 70%;
+    padding: 40px;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.contact-img .icon:nth-child(3) {
+    top: 10%;
+    left: 60%;
+    padding: 20px;
+    animation-delay: 2s;
+}
+
+.contact-img .icon:nth-child(4) {
+    top: 50%;
+    left: 80%;
+    padding: 10px;
+    animation-delay: 3s;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-10px) translateX(10px);
+    }
+    50% {
+        transform: translateY(10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-10px) translateX(10px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
 
 .contact-panel{
     display: flex;
@@ -32,9 +89,23 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); 
     overflow: hidden;
-    background-color: #ff50d0;
+    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
+    background-size: 600%;
+    animation: backanim 10s infinite;
     border-radius: 25px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes backanim {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% { 
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
 
 .contact-panel input, .contact-panel textarea{
@@ -112,6 +183,7 @@
 }
 
 @media (max-width: 1024px) {
+    
     .contact-panel{
         text-align: center;
     }
