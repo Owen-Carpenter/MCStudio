@@ -1,11 +1,17 @@
-import "../Styles/Navbar.css"
+import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
-import Hamburger from 'hamburger-react'
+import Hamburger from "hamburger-react";
 import { useState } from "react";
+import LoginPopup from "../components/LoginPopup"
+
 
 function Navbar() {
+  const [isOpen, setOpen] = useState(false);
+  const [isServicesOpen, setServicesOpen] = useState(false); // State for dropdown menu
 
-  const [isOpen, setOpen] = useState(false)
+  const toggleServices = () => {
+    setServicesOpen(!isServicesOpen);
+  };
 
   return (
     <>
@@ -17,26 +23,37 @@ function Navbar() {
             </a>
           </div>
           <div className="top-bar-menu">
-            <Link to={"/Account"}>
-              <button className="login">Login</button>
-            </Link>
+            <div className="login-popup">
+              <LoginPopup />
+            </div>
             <Link className="links" to={"/Purse"}>
               <img src="/assets/purse.png" alt="" className="purse" />
             </Link>
             <button className="menu">
-                <Hamburger toggled={isOpen} toggle={setOpen} />
+              <Hamburger toggled={isOpen} toggle={setOpen} />
             </button>
           </div>
         </div>
         <nav className={`navbar ${isOpen ? "open" : ""}`}>
           <Link className="links" to={"/"}>Home</Link>
-          <Link className="links" to={"/Services"}>Services</Link>
+          <div
+            className={`links services-link ${isServicesOpen ? "open" : ""}`}
+            onClick={toggleServices}
+          >
+            Services
+            <div className={`dropdown-menu ${isServicesOpen ? "visible" : ""}`}>
+              <Link to={"/Services/Facials"}>Facials</Link>
+              <Link to={"/Services/Waxing"}>Waxing</Link>
+              <Link to={"/Services/Lashes"}>Lashes</Link>
+              <Link to={"/Services/Other"}>Other</Link>
+            </div>
+          </div>
           <Link className="links" to={"/Gallery"}>Gallery</Link>
           <Link className="links" to={"/About"}>About</Link>
           <Link className="links" to={"/Contact"}>Contact</Link>
-          <Link to={"/Account"}>
-            <button className="login">Login</button>
-          </Link>
+          <div className="login-popup">
+            <LoginPopup />
+          </div>
           <Link className="links" to={"/Purse"}>
             <img src="/assets/purse.png" alt="" className="purse" />
           </Link>
