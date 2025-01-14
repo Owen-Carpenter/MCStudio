@@ -64,9 +64,13 @@
 }
 
 .about-values-card .card-icon{
-    padding-right: 20px;
+    display: flex;
     font-size: 25px;
     color: white;
+}
+
+.about-values-card .card-text{
+    padding-left: 20px;
 }
 
 @media (max-width: 1024px) {

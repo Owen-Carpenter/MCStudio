@@ -1,0 +1,67 @@
+.contact-hero{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: auto;
+    position: relative;
+    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
+    background-size: 400%;
+    animation: backanim 10s infinite;
+    border-bottom: 3px solid white;
+    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes backanim {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% { 
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.contact-hero-img{
+    height: 500px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.contact-hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-hero-content{
+    color: white;
+    padding: 100px;
+}
+
+.contact-hero-content h1{
+    font-size: 48px;
+}
+
+.contact-hero-content h2{
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .contact-hero{
+        justify-content: center;
+    }
+
+    .contact-hero-img{
+        display: none;
+    }
+
+    .contact-hero-content{
+        text-align: center;
+    }
+}

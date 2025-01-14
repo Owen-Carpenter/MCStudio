@@ -1,5 +1,5 @@
 .reviews-container{
-    height: 50vh;
+    height: auto;
     width: 100%;
     background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
     background-size: 400%;

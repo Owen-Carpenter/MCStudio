@@ -1,5 +1,5 @@
 .about-mission{
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 300px;
+    padding: 50px;
 }
 
 .about-mission-content h1 .h1-span{
