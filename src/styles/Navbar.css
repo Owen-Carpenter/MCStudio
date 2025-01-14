@@ -68,7 +68,7 @@
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 1);
     border: 1px solid #ff50d0;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
