@@ -9,7 +9,7 @@ function Footer(){
             <section className="footer-container">
                 <div className="info-container">
                     <div className="info-img">
-                        <img src="/public/assets/mcstudioLogo.png" alt="" className="logo" />
+                        <img src="/assets/mcstudioLogo.png" alt="" className="logo" />
                     </div>
                     <button className="login-btn">Login</button>
                     <button className="sign-up-btn">Sign Up</button>
@@ -28,10 +28,10 @@ function Footer(){
                 </div>
                 <div className="service-container">
                     <h1>Services</h1>
-                    <Link className="links" to={"/Services"}>Lashes</Link>
+                    <Link className="links" to={"/Services"}>Facials</Link>
                     <Link className="links" to={"/Services"}>Waxing</Link>
                     <Link className="links" to={"/Services"}>Facial</Link>
-                    <Link className="links" to={"/Services"}>Peel</Link>
+                    <Link className="links" to={"/Services"}>Others</Link>
                 </div>
                 <div className="connect-container">
                     <h1>Connect</h1>

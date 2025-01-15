@@ -19,7 +19,7 @@ function Navbar() {
         <div className="top-bar">
           <div className="logo-section">
             <a href="">
-              <img src="/public/assets/mcstudioLogo.png" alt="" className="logo" />
+              <img src="/assets/mcstudioLogo.png" alt="" className="logo" />
             </a>
           </div>
           <div className="top-bar-menu">

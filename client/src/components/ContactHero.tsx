@@ -9,7 +9,7 @@ function ContactHero(){
                     <h2>Have a question or need assistance? Reach out to me!</h2>
                 </div>
                 <div className="contact-hero-img">
-                    <img src="/public/assets/contactHero.png" alt="" />
+                    <img src="/assets/contactHero.png" alt="" />
                 </div>
             </section>
         </>

@@ -5,7 +5,7 @@ function AboutMission(){
         <>
             <section className="about-mission">
                 <div className="about-mission-img">
-                    <img src="/public/assets/missionImage.png" alt="" />
+                    <img src="/assets/missionImage.png" alt="" />
                 </div>
                 <div className="about-mission-content">
                     <h1><span className='h1-span'>Our</span>Mission</h1>

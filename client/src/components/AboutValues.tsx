@@ -48,7 +48,7 @@ function AboutValues(){
                     </div>
                 </div>
                 <div className="about-values-img">
-                    <img src="/public/assets/happyClient.webp" alt="" />
+                    <img src="/assets/happyClient.webp" alt="" />
                 </div>
             </section>
         </>

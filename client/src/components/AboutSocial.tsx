@@ -9,7 +9,7 @@ function AboutSocial(){
                     <p>MCS is more than a quality cosmetic studio, we're an active community of 1000 followers and counting. Follow us on Facebook and Instagram for a glimpse at the community.</p>
                 </div>
                 <div className="about-social-img">
-                    <img src="/public/assets/socialMedia.png" alt="" />
+                    <img src="/assets/socialMedia.png" alt="" />
                 </div>
             </section>
         </>
