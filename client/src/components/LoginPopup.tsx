@@ -3,25 +3,48 @@ import '../styles/LoginPopup.css';
 
 const LoginPopup: React.FC = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false); // State to toggle between Login and Sign-up
-  const [email, setEmail] = useState(''); // State for email
-  const [password, setPassword] = useState(''); // State for password
-  const [confirmPassword, setConfirmPassword] = useState(''); // State for confirm password (only for sign-up)
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState(''); // State for error message
 
   const closePopup = () => setPopupOpen(false);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (isSignUp) {
       if (password !== confirmPassword) {
         alert('Passwords do not match!');
         return;
       }
       console.log('Sign Up:', { email, password });
+      // Handle sign-up logic here (POST to backend)
     } else {
-      console.log('Login:', { email, password });
+      // Handle login logic
+      try {
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          console.log('Login successful:', data.message);
+          closePopup();
+        } else {
+          setError(data.message); // Display error message if login fails
+        }
+      } catch (err) {
+        console.error('Error during login:', err);
+        setError('Error during login.');
+      }
     }
-    closePopup();
   };
 
   return (
@@ -64,7 +87,6 @@ const LoginPopup: React.FC = () => {
                 />
               </div>
 
-              {/* Show confirm password input only for sign up */}
               {isSignUp && (
                 <div className="form-group">
                   <label htmlFor="confirm-password">Confirm Password:</label>
@@ -101,6 +123,7 @@ const LoginPopup: React.FC = () => {
                 )}
               </div>
             </form>
+            {error && <div className="error-message">{error}</div>}
           </div>
         </div>
       )}
