@@ -4,8 +4,25 @@ import '../styles/LoginPopup.css';
 const LoginPopup: React.FC = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false); // State to toggle between Login and Sign-up
+  const [email, setEmail] = useState(''); // State for email
+  const [password, setPassword] = useState(''); // State for password
+  const [confirmPassword, setConfirmPassword] = useState(''); // State for confirm password (only for sign-up)
 
   const closePopup = () => setPopupOpen(false);
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (isSignUp) {
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      console.log('Sign Up:', { email, password });
+    } else {
+      console.log('Login:', { email, password });
+    }
+    closePopup();
+  };
 
   return (
     <>
@@ -23,17 +40,27 @@ const LoginPopup: React.FC = () => {
               ✕
             </button>
             <h2>{isSignUp ? 'Sign Up' : 'Login'}</h2>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <div className="form-group">
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter your email" />
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="password">Password:</label>
                 <input
                   type="password"
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
+                  required
                 />
               </div>
 
@@ -44,7 +71,10 @@ const LoginPopup: React.FC = () => {
                   <input
                     type="password"
                     id="confirm-password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="Confirm your password"
+                    required
                   />
                 </div>
               )}

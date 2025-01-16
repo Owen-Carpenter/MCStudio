@@ -1,14 +1,12 @@
-const express = require('express');
-const path = require('path');
+import express from "express";
+import cors from "cors";
 
+const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
+app.use(cors());
+app.use(express.json());
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'));
-});
-
-app.listen(5000, () => {
-    console.log('Server is running on http://localhost:5000');
-});
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+})
