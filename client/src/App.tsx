@@ -3,6 +3,10 @@ import { About } from "./pages/About";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
 import { Gallery } from "./pages/Gallery";
+import { Waxing } from "./pages/Waxing";
+import { Facials } from "./pages/Facials";
+import { Lashes } from "./pages/Lashes";
+import { Other } from "./pages/Other";
 import './Styles/General.css';
 
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
@@ -15,6 +19,10 @@ function App() {
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/Services" element={<Services/>}/>
         <Route path="/Gallery" element={<Gallery/>}/>
+        <Route path="/Services/Facials" element={<Facials/>}/>
+        <Route path="/Services/Waxing" element={<Waxing/>}/>
+        <Route path="/Services/Lashes" element={<Lashes/>}/>
+        <Route path="/Services/Other" element={<Other/>}/>
       </Routes>
     </Router>
   </>)

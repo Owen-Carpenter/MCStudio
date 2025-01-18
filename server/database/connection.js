@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const URI = "mongodb+srv://owencarpenter:veawUis6rieoHcCs@mcs-loginauth.fmzbb.mongodb.net/Users"
+const URI = process.env.MONGODB_URI;
 //console.log('Environment Variables:', process.env);
 console.log('MONGODB_URI:', process.env.MONGODB_URI);
 if (!URI) {
