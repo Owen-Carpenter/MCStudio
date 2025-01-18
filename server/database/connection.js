@@ -1,6 +1,14 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+import dotenv from "dotenv";
 
-const URI = process.env.ATLAS_URI || "mongodb://AnfMLgcxu6718sXG";
+dotenv.config();
+
+const URI = "mongodb+srv://owencarpenter:veawUis6rieoHcCs@mcs-loginauth.fmzbb.mongodb.net/Users"
+//console.log('Environment Variables:', process.env);
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
+if (!URI) {
+  throw new Error("MONGODB_URI is not defined in the environment variables");
+}
 const client = new MongoClient(URI, {
   serverApi: {
     version: ServerApiVersion.v1,
