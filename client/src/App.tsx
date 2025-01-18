@@ -7,6 +7,8 @@ import { Waxing } from "./pages/Waxing";
 import { Facials } from "./pages/Facials";
 import { Lashes } from "./pages/Lashes";
 import { Other } from "./pages/Other";
+import { Login } from "./pages/Login";
+import { SignUp } from "./pages/SignUp";
 import './Styles/General.css';
 
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
@@ -23,6 +25,8 @@ function App() {
         <Route path="/Services/Waxing" element={<Waxing/>}/>
         <Route path="/Services/Lashes" element={<Lashes/>}/>
         <Route path="/Services/Other" element={<Other/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/SignUp" element={<SignUp/>}/>
       </Routes>
     </Router>
   </>)

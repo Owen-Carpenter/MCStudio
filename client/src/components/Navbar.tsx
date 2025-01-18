@@ -2,7 +2,6 @@ import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import LoginPopup from "../components/LoginPopup"
 
 
 function Navbar() {
@@ -23,9 +22,7 @@ function Navbar() {
             </a>
           </div>
           <div className="top-bar-menu">
-            <div className="login-popup">
-              <LoginPopup />
-            </div>
+          <Link className="login-link" to={"/Login"}><button className="login">Login</button></Link>
             <Link className="links" to={"/Purse"}>
               <img src="/assets/purse.png" alt="" className="purse" />
             </Link>
@@ -51,9 +48,7 @@ function Navbar() {
           <Link className="links" to={"/Gallery"}>Gallery</Link>
           <Link className="links" to={"/About"}>About</Link>
           <Link className="links" to={"/Contact"}>Contact</Link>
-          <div className="login-popup">
-            <LoginPopup />
-          </div>
+          <Link className="login-link" to={"/Login"}><button className="login">Login</button></Link>
           <Link className="links" to={"/Purse"}>
             <img src="/assets/purse.png" alt="" className="purse" />
           </Link>

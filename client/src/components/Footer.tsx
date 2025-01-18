@@ -11,8 +11,8 @@ function Footer(){
                     <div className="info-img">
                         <img src="/assets/mcstudioLogo.png" alt="" className="logo" />
                     </div>
-                    <button className="login-btn">Login</button>
-                    <button className="sign-up-btn">Sign Up</button>
+                    <Link to={"/Login"}><button className="login-btn">Login</button></Link>
+                    <Link to={"/SignUp"}><button className="sign-up-btn">Sign Up</button></Link>
                     <div className="socials-container">
                         <FontAwesomeIcon className='socials-icons' icon={faInstagram}/>
                         <FontAwesomeIcon className='socials-icons' icon={faFacebook}/>

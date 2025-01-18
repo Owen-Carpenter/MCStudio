@@ -129,7 +129,7 @@
     width: auto;
 }
 
-.top-bar .purse, .top-bar .login-popup{
+.top-bar .purse, .top-bar .login-link{
     display: none;
 }
 
@@ -172,7 +172,7 @@
         display: block;
     }
 
-    .navbar .purse, .navbar .login-popup{
+    .navbar .purse, .navbar .login-link{
         display: none;
     }
 
@@ -198,7 +198,7 @@
         padding-left: 20px;
     }
 
-    .top-bar .purse, .top-bar .login-popup{
+    .top-bar .purse, .top-bar .login-link{
         display: flex;
     }
 }

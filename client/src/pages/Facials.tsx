@@ -4,7 +4,6 @@ export function Facials(){
     return(
         <>
             <Navbar />
-            
         </>
     );
 }
