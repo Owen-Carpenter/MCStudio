@@ -3,13 +3,15 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import "../styles/Login.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
 export function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from || { pathname: "/" };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -18,7 +20,7 @@ export function Login(){
           .then((result) => {
             if (result.data.message === "Login successful") {
               localStorage.setItem("isAuthenticated", "true"); // Store login status
-              navigate("/");
+              navigate(from, { replace: true });
             } else if (result.data.message === "Incorrect password") {
               alert("Incorrect email or password");
             }

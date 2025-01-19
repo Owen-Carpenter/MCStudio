@@ -11,7 +11,7 @@ interface CartItem {
     imgURL: string;
 }
 
-function Purse() {
+export function Purse() {
     const [cart, setCart] = useState<CartItem[]>([]);
 
     useEffect(() => {
@@ -53,5 +53,3 @@ function Purse() {
         </>
     );
 }
-
-export default Purse;

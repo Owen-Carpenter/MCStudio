@@ -37,3 +37,36 @@
     color: #f2f2f2;
     margin-bottom: 2rem;
 }
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 15px 30px;
+    border: 1px solid #ff50d0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.popup a {
+    margin-left: 10px;
+    color: #ff50d0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
