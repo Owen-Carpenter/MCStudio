@@ -12,7 +12,7 @@ function DetailedServiceCard() {
     <>
       <div className="detailed-card">
         <div className="detailed-card-img">
-            <img src="/assets/class-icon.png" alt="" />
+            <img src="/assets/angel-wet-icon.png" alt="" />
         </div>
         <div className="detailed-card-content">
             <div className="detailed-card-text">
@@ -21,7 +21,8 @@ function DetailedServiceCard() {
             </div>
             <div className="detailed-card-price">
                 <h2>$70</h2>
-                <button className="atc"><Link to={'/purse'}></Link></button>
+                <Link to={'/purse'}><button className="atc-btn">Add to Purse</button></Link>
+                <h2>150 Min</h2>
             </div>
         </div>
       </div>
