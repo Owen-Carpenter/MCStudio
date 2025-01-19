@@ -38,6 +38,13 @@ export function Facials(){
                         price={75}
                         time="60 Min"
                     />
+                    <DetailedServiceCard
+                        imgURL="/assets/brow-tint-wax-icon.png"
+                        title="Brow Tint & Wax"
+                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        price={37}
+                        time="45 Min"
+                    />
                 </div>
             </section>
             <Footer />

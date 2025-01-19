@@ -62,7 +62,6 @@ function Navbar() {
               <Link to={"/Services/Facials"}>Facials</Link>
               <Link to={"/Services/Waxing"}>Waxing</Link>
               <Link to={"/Services/Lashes"}>Lashes</Link>
-              <Link to={"/Services/Other"}>Other</Link>
             </div>
           </div>
           <Link className="links" to={"/Gallery"}>Gallery</Link>

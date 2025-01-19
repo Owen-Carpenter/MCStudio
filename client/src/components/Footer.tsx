@@ -28,10 +28,9 @@ function Footer(){
                 </div>
                 <div className="service-container">
                     <h1>Services</h1>
-                    <Link className="links" to={"/Services"}>Facials</Link>
-                    <Link className="links" to={"/Services"}>Waxing</Link>
-                    <Link className="links" to={"/Services"}>Facial</Link>
-                    <Link className="links" to={"/Services"}>Others</Link>
+                    <Link className="links" to={"/Services/Facials"}>Facials</Link>
+                    <Link className="links" to={"/Services/Waxing"}>Waxing</Link>
+                    <Link className="links" to={"/Services/Lashes"}>Lashes</Link>
                 </div>
                 <div className="connect-container">
                     <h1>Connect</h1>
