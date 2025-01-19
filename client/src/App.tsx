@@ -6,7 +6,7 @@ import { Gallery } from "./pages/Gallery";
 import { Waxing } from "./pages/Waxing";
 import { Facials } from "./pages/Facials";
 import { Lashes } from "./pages/Lashes";
-import { Other } from "./pages/Other";
+import { Purse } from "./pages/Purse";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/SignUp";
 import './Styles/General.css';
@@ -27,6 +27,7 @@ function App() {
         <Route path="/Services/Lashes" element={<Lashes/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="/Purse" element={<Purse/>}/>
       </Routes>
     </Router>
   </>)

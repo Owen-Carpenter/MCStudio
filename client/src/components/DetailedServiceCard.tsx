@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 
 function DetailedServiceCard({title, desc, price, time, imgURL}: {title: string, desc: string, price: number, time: string, imgURL : string}) {
 
-    const handleAddToCart = () => {
-
-    }
+  const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const newItem = { title, desc, price, time, imgURL };
+    cart.push(newItem);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
 
   return (
     <>
@@ -21,7 +24,7 @@ function DetailedServiceCard({title, desc, price, time, imgURL}: {title: string,
             </div>
             <div className="detailed-card-price">
                 <h2>${price}</h2>
-                <Link to={'/purse'}><button className="atc-btn"><img src="/assets/atc-icon.png" alt="" /></button></Link>
+                <Link to={'/purse'}><button onClick={handleAddToCart} className="atc-btn"><img src="/assets/atc-icon.png" alt="" /></button></Link>
                 <h2>{time}</h2>
             </div>
         </div>
