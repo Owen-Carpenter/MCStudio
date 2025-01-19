@@ -15,7 +15,6 @@ export function Facials(){
                     <DetailedServiceCard />
                     <DetailedServiceCard />
                     <DetailedServiceCard />
-                    
                 </div>
             </section>
         </>
