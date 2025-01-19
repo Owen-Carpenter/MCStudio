@@ -1,7 +1,6 @@
 .facials-services-container{
     width: 100%;
     height: auto;
-    padding: 50px;
     padding-top: 100px;
     display: flex;
     justify-content: center;
@@ -15,8 +14,10 @@
 
 .facials-services-container .card-container {
   display: grid;
+  padding: 100px;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 50px;
 }
 
 @keyframes backanim {
