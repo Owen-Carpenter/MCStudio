@@ -1,16 +1,19 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/SignUp.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export function SignUp() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -20,8 +23,11 @@ export function SignUp() {
             return;
         }
 
-        axios.post('http://localhost:3001/register', {email, password})
-        .then(result => console.log(result))
+        axios.post('http://localhost:8080/register', {name, email, password})
+        .then(result => {
+            console.log(result);
+            navigate('/login');
+        })
         .catch(err => console.log(err))
     }
 
@@ -38,6 +44,10 @@ export function SignUp() {
                 <div className="login-container">
                     <h1>Sign Up</h1>
                     <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="name">Name</label>
+                            <input type="text" id="name" name="name" onChange={(e) => setName(e.target.value)} />
+                        </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input type="email" id="email" name="email" onChange={(e) => setEmail(e.target.value)} />

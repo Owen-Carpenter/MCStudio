@@ -20,7 +20,7 @@ function ServicesHome(){
                     one="Enhances natural lashes with a subtle lift and curl"
                     two="Provides a semi-permanent darkening effect for a natural look"
                     three="Achieves a fuller, elegant look without mascara"
-                    imageURL="/assets/classic-icon.PNG"
+                    imageURL="/assets/classic-icon.png"
                 />
                 <ServiceCard 
                     title="Angel/Wet Lashes"

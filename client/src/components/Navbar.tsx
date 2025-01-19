@@ -1,15 +1,27 @@
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const [isServicesOpen, setServicesOpen] = useState(false); // State for dropdown menu
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Authentication state
+
+  useEffect(() => {
+    // Check login status from localStorage or context
+    const loggedIn = localStorage.getItem("isAuthenticated") === "true";
+    setIsAuthenticated(loggedIn);
+  }, []);
 
   const toggleServices = () => {
     setServicesOpen(!isServicesOpen);
+  };
+
+  const handleLogout = () => {
+    // Clear authentication state and localStorage
+    setIsAuthenticated(false);
+    localStorage.removeItem("isAuthenticated");
   };
 
   return (
@@ -22,7 +34,15 @@ function Navbar() {
             </a>
           </div>
           <div className="top-bar-menu">
-          <Link className="login-link" to={"/Login"}><button className="login">Login</button></Link>
+            {!isAuthenticated ? (
+              <Link className="login-link" to={"/Login"}>
+                <button className="login">Login</button>
+              </Link>
+            ) : (
+              <button className="login-link login" onClick={handleLogout}>
+                Logout
+              </button>
+            )}
             <Link className="links" to={"/Purse"}>
               <img src="/assets/purse.png" alt="" className="purse" />
             </Link>
@@ -48,7 +68,15 @@ function Navbar() {
           <Link className="links" to={"/Gallery"}>Gallery</Link>
           <Link className="links" to={"/About"}>About</Link>
           <Link className="links" to={"/Contact"}>Contact</Link>
-          <Link className="login-link" to={"/Login"}><button className="login">Login</button></Link>
+          {!isAuthenticated ? (
+            <Link className="login-link" to={"/Login"}>
+              <button className="login">Login</button>
+            </Link>
+          ) : (
+            <button className="login-link login" onClick={handleLogout}>
+              Logout
+            </button>
+          )}
           <Link className="links" to={"/Purse"}>
             <img src="/assets/purse.png" alt="" className="purse" />
           </Link>
