@@ -3,14 +3,26 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/SignUp.css";
+import axios from "axios";
 
 export function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (password !== confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+
+        axios.post('http://localhost:3001/register', {email, password})
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
     }
 
     return (
@@ -38,6 +50,8 @@ export function SignUp() {
                             <label htmlFor="confirm-password">Confirm Password</label>
                             <input type="password" id="confirm-password" name="confirm-password" onChange={(e) => setConfirmPassword(e.target.value)} />
                         </div>
+                        {error && <p className="error">{error}</p>}
+                        {success && <p className="success">{success}</p>}
                         <button className="login-submit-btn" type="submit">Sign Up</button>
                     </form>
                     <h4>Already have an account?<span><Link to={"/Login"}>Login</Link></span></h4>
