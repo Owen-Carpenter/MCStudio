@@ -13,6 +13,7 @@
 .cart-item {
     display: flex;
     align-items: center;
+    justify-self: center;
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -28,7 +29,7 @@
 
 .cart-item-details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
 }
 

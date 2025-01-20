@@ -129,7 +129,26 @@
     width: auto;
 }
 
-.top-bar .purse, .top-bar .login-link{
+.purse-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-count {
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    background-color: #ff50d0;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    line-height: 1;
+  }
+
+.top-bar .purse-container, .top-bar .login-link{
     display: none;
 }
 
@@ -172,7 +191,7 @@
         display: block;
     }
 
-    .navbar .purse, .navbar .login-link{
+    .navbar .purse, .navbar .login-link, .navbar .purse-container{
         display: none;
     }
 
@@ -198,7 +217,7 @@
         padding-left: 20px;
     }
 
-    .top-bar .purse, .top-bar .login-link{
+    .top-bar .purse, .top-bar .login-link, .top-bar .purse-container{
         display: flex;
     }
 }

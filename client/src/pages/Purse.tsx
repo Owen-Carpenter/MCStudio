@@ -22,6 +22,7 @@ export function Purse() {
     const handleRemoveItem = (index: number) => {
         const updatedCart = cart.filter((_, i) => i !== index);
         setCart(updatedCart);
+        window.location.reload();
         localStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
@@ -29,20 +30,19 @@ export function Purse() {
         <>
             <Navbar />
             <section className="purse-section">
-                <h1>Your Cart</h1>
+                <h1>Your Purse</h1>
                 <div className="cart-container">
                     {cart.length === 0 ? (
-                        <p>Your cart is empty.</p>
+                        <p>Your purse is empty.</p>
                     ) : (
                         cart.map((item, index) => (
                             <div key={index} className="cart-item">
                                 <img src={item.imgURL} alt={item.title} />
                                 <div className="cart-item-details">
                                     <h2>{item.title}</h2>
-                                    <p>{item.desc}</p>
                                     <p>${item.price}</p>
                                     <p>{item.time}</p>
-                                    <button onClick={() => handleRemoveItem(index)}>Remove</button>
+                                    <button onClick={() => handleRemoveItem(index)}>✖</button>
                                 </div>
                             </div>
                         ))

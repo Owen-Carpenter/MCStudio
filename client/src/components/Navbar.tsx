@@ -1,25 +1,31 @@
-import "../Styles/Navbar.css";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
-import { useState, useEffect } from "react";
+import "../Styles/Navbar.css";
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const [isServicesOpen, setServicesOpen] = useState(false); // State for dropdown menu
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Authentication state
+  const [cartCount, setCartCount] = useState(0); // State for cart item count
 
   useEffect(() => {
-    // Check login status from localStorage or context
+    // Check login status from localStorage
     const loggedIn = localStorage.getItem("isAuthenticated") === "true";
     setIsAuthenticated(loggedIn);
+
+    // Update cart count from localStorage
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    setCartCount(cart.length);
   }, []);
 
+  // Handle services dropdown toggle
   const toggleServices = () => {
     setServicesOpen(!isServicesOpen);
   };
 
+  // Handle logout
   const handleLogout = () => {
-    // Clear authentication state and localStorage
     setIsAuthenticated(false);
     localStorage.removeItem("isAuthenticated");
   };
@@ -43,8 +49,9 @@ function Navbar() {
                 Logout
               </button>
             )}
-            <Link className="links" to={"/Purse"}>
+            <Link className="links purse-container" to={"/Purse"}>
               <img src="/assets/purse.png" alt="" className="purse" />
+              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
             </Link>
             <button className="menu">
               <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -76,8 +83,9 @@ function Navbar() {
               Logout
             </button>
           )}
-          <Link className="links" to={"/Purse"}>
+          <Link className="links purse-container" to={"/Purse"}>
             <img src="/assets/purse.png" alt="" className="purse" />
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </nav>
       </section>

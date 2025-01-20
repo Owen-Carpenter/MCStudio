@@ -14,12 +14,12 @@ function DetailedServiceCard({ title, desc, price, time, imgURL }: { title: stri
             return;
         }
 
-
         const cart = JSON.parse(localStorage.getItem('cart') || '[]');
         const newItem = { title, desc, price, time, imgURL };
         cart.push(newItem);
         localStorage.setItem('cart', JSON.stringify(cart));
         setShowPopup(true);
+        window.location.reload();
         setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
     }
 
