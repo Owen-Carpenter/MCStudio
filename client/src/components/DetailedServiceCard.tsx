@@ -19,8 +19,11 @@ function DetailedServiceCard({ title, desc, price, time, imgURL }: { title: stri
         cart.push(newItem);
         localStorage.setItem('cart', JSON.stringify(cart));
         setShowPopup(true);
-        window.location.reload();
-        setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
+        
+        setTimeout(() => {
+            window.location.reload();
+            setShowPopup(false)
+        } , 1500); //1.5secodns delay
     }
 
     return (

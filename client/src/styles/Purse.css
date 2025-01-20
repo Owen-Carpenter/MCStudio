@@ -4,46 +4,71 @@
     padding-top: 100px;
 }
 
+.purse-section h1 {
+    color: #ff50d0;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .cart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
+.header-container,
 .cart-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 0.5fr; /* Adjust widths as needed */
     align-items: center;
-    justify-self: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    gap: 10px;
     width: 80%;
 }
 
-.cart-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+.header-container {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
 }
 
-.cart-item-details {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.cart-item-details h2 {
+.header-container h2 {
+    color: #ff50d0;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
-    font-size: 1.5rem;
 }
 
-.cart-item-details p {
-    margin: 5px 0;
+.cart-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.cart-item h2,
+.cart-item p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cart-item button{
+    border: none;
+    background-color: #ff50d0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
 }
 
 .cart-item-details button {
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #ff50d0;
     color: #fff;
     border: none;
@@ -53,4 +78,61 @@
 
 .cart-item-details button:hover {
     background-color: #ff82c1;
+}
+
+.cart-item-details .quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    height: 25px;
+    width: 25px;
+    background-color: #ff50d0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #ff82c1;
+}
+
+.quantity-controls p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .header-container,
+    .cart-item {
+        width: 100%;
+    }
+
+    .header-container h2 {
+        font-size: 16px;
+    }
+
+    .cart-item h2,
+    .cart-item p {
+        font-size: 16px;
+    }
+    
+    .purse-section {
+        padding: 0px;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    
 }
