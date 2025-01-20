@@ -13,5 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "@date-io/dayjs": "^3.2.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.0",
+    "@mui/x-date-pickers": "^7.24.0",
+    "dayjs": "^1.11.13"
   }
 }

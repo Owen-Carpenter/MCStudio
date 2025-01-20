@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import '../styles/Purse.css';
 
 interface CartItem {
@@ -34,6 +38,7 @@ export function Purse() {
     };
 
     const handleRemoveItem = (index: number) => {
+        window.location.reload();
         const updatedCart = cart.filter((_, i) => i !== index);
         setCart(updatedCart);
         localStorage.setItem('cart', JSON.stringify(updatedCart));
@@ -47,11 +52,11 @@ export function Purse() {
                 <div className="cart-container">
                     <div className="header-container">
                         <h2>Item</h2>
-                        <h2>Schedule</h2>
                         <h2>Price</h2>
                         <h2>Quantity</h2>
                         <h2>Total</h2>
                         <h2></h2>
+                        <h2>Schedule</h2>
                     </div>
                     {cart.length === 0 ? (
                         <p>Your purse is empty.</p>
@@ -59,7 +64,7 @@ export function Purse() {
                         cart.map((item, index) => (
                             <div key={index} className="cart-item">
                                 <h2>{item.title}</h2>
-                                <p>{item.time}</p>
+                                
                                 <p>${item.price.toFixed(2)}</p>
                                 <div className="quantity-controls">
                                     <button onClick={() => handleQuantityChange(index, -1)}>-</button>
@@ -68,7 +73,12 @@ export function Purse() {
                                 </div>
                                 <p>${(item.price * item.quantity).toFixed(2)}</p>
                                 <h2></h2>
-                                <button onClick={() => handleRemoveItem(index)}>✖</button>
+                                <p>
+                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                        <DatePicker label="" className="date-picker" />
+                                    </LocalizationProvider>
+                                </p>
+                                <button className='cancel' onClick={() => handleRemoveItem(index)}>✖</button>
                             </div>
                         ))
                     )}

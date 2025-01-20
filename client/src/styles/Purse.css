@@ -57,7 +57,7 @@
     text-align: center;
 }
 
-.cart-item button{
+.cart-item .cancel{
     border: none;
     background-color: #ff50d0;
     width: 25px;
@@ -84,6 +84,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.date-picker {
+    width: 175px;
 }
 
 .quantity-controls {
@@ -133,6 +137,10 @@
         text-align: center;
         padding-top: 100px;
         padding-bottom: 50px;
+    }
+
+    .date-picker{
+        width: 100px;
     }
     
 }
