@@ -130,7 +130,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 100px;
 }
 
 .date-time-container h2 {
@@ -156,6 +155,25 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     font-size: 20px;
+}
+
+.checkout-btn{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 3px solid #ff50d0;
+    color: #ff50d0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout-btn:hover{
+    background-color: #ff50d0;
+    color: white;
 }
 
 @media (max-width: 1024px) {

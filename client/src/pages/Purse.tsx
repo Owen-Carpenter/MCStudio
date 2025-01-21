@@ -52,6 +52,7 @@ export function Purse() {
     const handleRemoveItem = (index: number) => {
         const updatedCart = cart.filter((_, i) => i !== index);
         setCart(updatedCart);
+        window.location.reload();
         localStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
@@ -120,8 +121,9 @@ export function Purse() {
                             <p>${subtotal.toFixed(2)}</p>
                             <h2>Tax:</h2>
                             <p>${tax.toFixed(2)}</p>
-                            <h2>Total:</h2>
+                            <h2 className='total-style'>Total:</h2>
                             <p>${overall.toFixed(2)}</p>
+                            <button className="checkout-btn">Checkout</button>
                         </div>
                     </div>
                 </div>
