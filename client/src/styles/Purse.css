@@ -125,6 +125,7 @@
 }
 
 .date-time-container {
+    width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,12 +139,7 @@
     font-size: 20px;
 }
 
-.service-type-container{
-    margin-top: 10px;
-    width: 90%;
-}
-
-.date-time-container .date-picker, .date-time-container .time-picker {
+.date-time-container .date-picker, .date-time-container .time-picker, .date-time-container .service-type-container {
     width: 175px;
     padding-top: 15px;
     padding-right: 10px;
@@ -191,10 +187,6 @@
     .date-time-container{
         justify-content: start;
         align-items: start;
-    }
-
-    .service-type-container{
-        margin-top: 10px;
-        width: 175px;
+        flex-direction: column;
     }
 }

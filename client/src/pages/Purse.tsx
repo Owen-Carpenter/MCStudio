@@ -96,24 +96,24 @@ export function Purse() {
                                     <DatePicker label="" className="date-picker" />
                                     <MobileTimePicker className="time-picker" defaultValue={dayjs('2022-04-17T15:30')} />
                                 </LocalizationProvider>
+                                <Box className="service-type-container" sx={{ minWidth: 120 }}>
+                                    <FormControl fullWidth>
+                                        <InputLabel id="demo-simple-select-label">Fill</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-label"
+                                            id="demo-simple-select"
+                                            value={age}
+                                            label="Age"
+                                            onChange={handleSelectChange}
+                                        >
+                                            <MenuItem value={0}>No Fill</MenuItem>
+                                            <MenuItem value={2}>2 Week Fill</MenuItem>
+                                            <MenuItem value={3}>3 Week Fill</MenuItem>
+                                            <MenuItem value={4}>4 Week Fill</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </Box>
                             </p>
-                            <Box className="service-type-container" sx={{ minWidth: 120 }}>
-                                <FormControl fullWidth>
-                                    <InputLabel id="demo-simple-select-label">Fill</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        value={age}
-                                        label="Age"
-                                        onChange={handleSelectChange}
-                                    >
-                                        <MenuItem value={0}>No Fill</MenuItem>
-                                        <MenuItem value={2}>2 Week Fill</MenuItem>
-                                        <MenuItem value={3}>3 Week Fill</MenuItem>
-                                        <MenuItem value={4}>4 Week Fill</MenuItem>
-                                    </Select>
-                                </FormControl>
-                            </Box>
                         </div>
                         <div className="price-total-container">
                             <h2>Subtotal:</h2>
