@@ -21,7 +21,7 @@
 .header-container,
 .cart-item {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 0.5fr; /* Adjust widths as needed */
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr; /* Adjust widths as needed */
     align-items: center;
     gap: 10px;
     width: 80%;
@@ -40,6 +40,7 @@
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
+    text-align: center;
 }
 
 .cart-item {
@@ -57,13 +58,15 @@
     text-align: center;
 }
 
-.cart-item .cancel{
+.cart-item .cancel {
     border: none;
+    position: absolute;
     background-color: #ff50d0;
     width: 25px;
     height: 25px;
     cursor: pointer;
     border-radius: 50%;
+    right: 10px;
     color: white;
 }
 
@@ -80,20 +83,17 @@
     background-color: #ff82c1;
 }
 
-.cart-item-details .quantity{
+.cart-item-details .quantity {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.date-picker {
-    width: 175px;
-}
-
 .quantity-controls {
+    justify-content: center;
+    align-items: center;
     display: flex;
     align-items: center;
-    padding-left: 25px;
     gap: 10px;
 }
 
@@ -115,6 +115,46 @@
     margin: 0;
     font-size: 1rem;
     text-align: center;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.date-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.date-time-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ff50d0;
+    font-size: 20px;
+}
+
+.date-time-container .date-picker, .date-time-container .time-picker {
+    width: 175px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.price-total-container{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: end;
+}
+
+.price-total-container h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -139,8 +179,7 @@
         padding-bottom: 50px;
     }
 
-    .date-picker{
+    .date-picker {
         width: 100px;
     }
-    
 }

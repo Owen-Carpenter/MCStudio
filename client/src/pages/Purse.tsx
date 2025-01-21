@@ -22,6 +22,11 @@ interface CartItem {
 export function Purse() {
     const [cart, setCart] = useState<CartItem[]>([]);
 
+    const TAX_RATE = 0.065; 
+    const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const tax = subtotal * TAX_RATE;
+    const overall = subtotal + tax;
+
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('cart') || '[]');
         setCart(storedCart.map((item: CartItem) => ({ ...item, quantity: item.quantity || 1 })));
@@ -57,8 +62,6 @@ export function Purse() {
                         <h2>Price</h2>
                         <h2>Quantity</h2>
                         <h2>Total</h2>
-                        <h2></h2>
-                        <h2>Schedule</h2>
                     </div>
                     {cart.length === 0 ? (
                         <p>Your purse is empty.</p>
@@ -74,17 +77,29 @@ export function Purse() {
                                     <button onClick={() => handleQuantityChange(index, 1)}>+</button>
                                 </div>
                                 <p>${(item.price * item.quantity).toFixed(2)}</p>
-                                <h2></h2>
-                                <p>
-                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                        <DatePicker label="" className="date-picker" />
-                                        <MobileTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
-                                    </LocalizationProvider>
-                                </p>
                                 <button className='cancel' onClick={() => handleRemoveItem(index)}>✖</button>
                             </div>
                         ))
                     )}
+                    <div className="bottom-container">
+                        <div className="date-time-container">
+                            <p>
+                                <h2>Schedule</h2>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                    <DatePicker label="" className="date-picker" />
+                                    <MobileTimePicker className='time-picker' defaultValue={dayjs('2022-04-17T15:30')} />
+                                </LocalizationProvider>
+                            </p>
+                        </div>
+                        <div className="price-total-container">
+                        <h2>Subtotal:</h2>
+                            <p>${subtotal.toFixed(2)}</p>
+                            <h2>Tax:</h2>
+                            <p>${tax.toFixed(2)}</p>
+                            <h2>Total:</h2>
+                            <p>${overall.toFixed(2)}</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <Footer />
