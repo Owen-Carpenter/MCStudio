@@ -25,7 +25,7 @@ export function Login(){
           .post("http://localhost:8080/login", { email, password })
           .then((result) => {
             if (result.data.message === "Login successful") {
-              localStorage.setItem("isAuthenticated", "true"); // Store login status
+              localStorage.setItem("isAuthenticated", "true");
               navigate(from, { replace: true });
             } else if (result.data.message === "Incorrect password") {
               alert("Incorrect email or password");
