@@ -2,7 +2,7 @@
     height: auto;
     width: 100%;
     display: flex;
-    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
+    background-image: linear-gradient(125deg, #4a4a4a, #6e6e6e, #9e9e9e, #C9B037, #D1A054, #E4C38A, #F0E68C, #D1A054, #C9B037);    background-size: 400%;
     background-size: 400%;
     animation: backanim 10s infinite;
     box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);

@@ -45,7 +45,7 @@
 }
 
 .detailed-card-content .detailed-card-text h1 {
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 32px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-top: 20px;
@@ -76,7 +76,7 @@
     cursor: pointer;
     padding: 10px 35px;
     background-color: transparent;
-    border: 2px solid #ff50d0;
+    border: 2px solid #D4AF37;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@
 }
 
 .atc-btn:hover {
-    background-color: #ff50d0; /* Change background color on hover */
+    background-color: #D4AF37; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
 }
 

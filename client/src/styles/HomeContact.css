@@ -21,7 +21,7 @@
     font-size: 50px; 
     color: white;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
-    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
+    background-image: linear-gradient(125deg, #C9B037, #E4C38A, #B8860B, #D1A054, #F0E68C, #C9B037);
     background-size: 1000%;
     border: 1px solid #f2f2f2;
     backdrop-filter: blur(5px);
@@ -88,9 +88,10 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); 
     overflow: hidden;
-    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
-    background-size: 600%;
+    background-image: linear-gradient(125deg, #4a4a4a, #6e6e6e, #9e9e9e, #C9B037, #D1A054, #E4C38A, #F0E68C, #D1A054, #C9B037);    background-size: 400%;
     animation: backanim 10s infinite;
+    box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
+    background-size: 400%;
     border-radius: 25px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
 }
@@ -139,7 +140,7 @@
     background: none;
     border: 1px solid #f2f2f2;
     font-weight: 600;
-    color: #ff50d0;
+    color: #D4AF37;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
@@ -157,7 +158,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #ff50d0; 
+    background-color: #D4AF37; 
     transition: left 0.3s ease;
     z-index: -1; 
 }

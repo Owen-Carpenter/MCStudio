@@ -33,7 +33,7 @@
 
 .title {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 20px; 
 }
 
@@ -63,7 +63,7 @@
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); 
-    color: #ff50d0;
+    color: #D4AF37;
     border: none;
     width: 100%;
     padding: 10px 0px;

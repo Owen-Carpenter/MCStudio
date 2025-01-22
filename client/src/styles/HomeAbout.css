@@ -38,7 +38,7 @@
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #ff50d0;
+    border: 2px solid #D4AF37;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.50);
     transition: transform 0.6s ease; 
     transform-origin: center; 
@@ -51,7 +51,7 @@
 
 .about-content h1{
     font-size: 40px;
-    color: #ff50d0;
+    color: #D4AF37;
     padding-bottom: 20px;
 }
 

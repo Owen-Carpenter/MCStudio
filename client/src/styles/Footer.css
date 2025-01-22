@@ -5,7 +5,7 @@
     justify-content: space-around;
     padding: 50px 0px;
     overflow: hidden;
-    border-top: 3px solid #ff50d0;
+    border-top: 3px solid #D4AF37;
     box-shadow: inset 0 5px 25px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -36,9 +36,9 @@
     padding: 5px 10px;
     border-radius: 10px;
     background: none;
-    border: 1px solid #ff50d0;
+    border: 1px solid #D4AF37;
     font-weight: 500;
-    color: #ff50d0;
+    color: #D4AF37;
     background: none;
     position: relative;
     overflow: hidden;
@@ -53,7 +53,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #ff50d0; 
+    background-color: #D4AF37; 
     transition: left 0.3s ease;
     z-index: -1; 
 }
@@ -88,7 +88,7 @@
 .footer-container h1{
     font-size: 32px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff50d0;
+    color: #D4AF37;
     padding-bottom: 10px;
 }
 
@@ -109,7 +109,7 @@
 .connect-container .phone, .connect-container .email{
     font-size: 16px;
     font-weight: 500;
-    color: #ff50d0;
+    color: #D4AF37;
 }
 
 @media (max-width: 1024px) {

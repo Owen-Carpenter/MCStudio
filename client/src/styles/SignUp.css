@@ -68,9 +68,9 @@
 .ball:nth-child(1) {
     width: 150px; /* 50px * 3 */
     height: 150px; /* 50px * 3 */
-    background-color: #ff7abd;
-    box-shadow: 0 0 50px 25px #ff7abd;
-    border: 2px solid #ff93c9;
+    background-color: #C9B037;
+    box-shadow: 0 0 50px 25px #C9B037;
+    border: 2px solid #d1bd5a;
     top: 10%;
     left: 20%;
     animation-duration: 4s;
@@ -79,9 +79,9 @@
 .ball:nth-child(2) {
     width: 210px; /* 70px * 3 */
     height: 210px; /* 70px * 3 */
-    background-color: #ffdcae;
-    box-shadow: 0 0 50px 25px #ffdcae;
-    border: 2px solid #fce1be;
+    background-color: #E4C38A;
+    box-shadow: 0 0 50px 25px #E4C38A;
+    border: 2px solid #ddc395;
     top: 30%;
     left: 50%;
     animation-duration: 6s;
@@ -90,9 +90,9 @@
 .ball:nth-child(3) {
     width: 180px; /* 60px * 3 */
     height: 180px; /* 60px * 3 */
-    background-color: #D2B48C;
-    box-shadow: 0 0 50px 25px #D2B48C;
-    border: 2px solid #d3bea2;
+    background-color: #B8860B;
+    box-shadow: 0 0 50px 25px #B8860B;
+    border: 2px solid #bd942c;
     top: 90%;
     left: 70%;
     animation-duration: 3s;
@@ -101,9 +101,9 @@
 .ball:nth-child(4) {
     width: 240px; /* 80px * 3 */
     height: 240px; /* 80px * 3 */
-    background-color: #f1a2ca;
-    box-shadow: 0 0 50px 25px #f1a2ca;
-    border: 2px solid #f0bcd6;
+    background-color: #D1A054;
+    box-shadow: 0 0 50px 25px #D1A054;
+    border: 2px solid #cfac78;
     top: 70%;
     left: 30%;
     animation-duration: 5s;
@@ -112,9 +112,9 @@
 .ball:nth-child(5) {
     width: 120px; /* 40px * 3 */
     height: 120px; /* 40px * 3 */
-    background-color: #FF69B4;
-    box-shadow: 0 0 50px 25px #FF69B4;
-    border: 2px solid #ff89c4;
+    background-color: #F0E68C;
+    box-shadow: 0 0 50px 25px #F0E68C;
+    border: 2px solid #ebe3a0;
     top: 20%;
     left: 80%;
     animation-duration: 2.5s;
@@ -123,9 +123,9 @@
 .ball:nth-child(6) {
     width: 270px; /* 90px * 3 */
     height: 270px; /* 90px * 3 */
-    background-color: #ff82c1;
-    box-shadow: 0 0 50px 25px #ff82c1;
-    border: 2px solid #ffa9d4;
+    background-color: #C9B037;
+    box-shadow: 0 0 50px 25px #C9B037;
+    border: 2px solid #c2ae4e;
     top: 60%;
     left: -10%;
     animation-duration: 8s;

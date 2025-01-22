@@ -5,7 +5,7 @@ import DetailedServiceCard from "./DetailedServiceCard";
 
 function ServicesHome(){
     return(<>
-        <section className="services-container">
+        <section className="home-page-services services-container">
             <div className="services-text-container">
                 <h1>Best Selling Services</h1>
             </div>

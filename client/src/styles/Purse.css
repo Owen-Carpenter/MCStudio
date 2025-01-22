@@ -5,7 +5,7 @@
 }
 
 .purse-section h1 {
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +36,7 @@
 }
 
 .header-container h2 {
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
@@ -61,7 +61,7 @@
 .cart-item .cancel {
     border: none;
     position: absolute;
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -72,7 +72,7 @@
 
 .cart-item-details button {
     padding: 10px;
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -80,7 +80,7 @@
 }
 
 .cart-item-details button:hover {
-    background-color: #ff82c1;
+    background-color: #dabe63;
 }
 
 .cart-item-details .quantity {
@@ -100,7 +100,7 @@
 .quantity-controls button {
     height: 25px;
     width: 25px;
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -108,7 +108,7 @@
 }
 
 .quantity-controls button:hover {
-    background-color: #ff82c1;
+    background-color: #dabe63;
 }
 
 .quantity-controls p {
@@ -134,7 +134,7 @@
 
 .date-time-container h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 20px;
 }
 
@@ -165,14 +165,14 @@
     padding: 10px 20px;
     border-radius: 10px;
     background-color: transparent;
-    border: 3px solid #ff50d0;
-    color: #ff50d0;
+    border: 3px solid #D4AF37;
+    color: #D4AF37;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .checkout-btn:hover{
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     color: white;
 }
 

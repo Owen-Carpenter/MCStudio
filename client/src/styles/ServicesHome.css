@@ -3,9 +3,9 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-image: linear-gradient(125deg, #ff7abd, #ffdcae, #D2B48C, #f1a2ca, #FF69B4, #ff82c1);
-    background-size: 400%;
+    background-image: linear-gradient(125deg, #4a4a4a, #6e6e6e, #9e9e9e, #C9B037, #D1A054, #E4C38A, #F0E68C, #D1A054, #C9B037);    background-size: 400%;
     animation: backanim 10s infinite;
+    background-size: 400%;
     box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
     border-bottom: 3px solid #f2f2f2;
 }
@@ -42,7 +42,7 @@
     padding: 10px 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    color: #ff50d0;
+    color: #D4AF37;
     border: 1px solid #f2f2f2;
     background-color: transparent;
     border-radius: 20px;

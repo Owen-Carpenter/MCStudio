@@ -28,7 +28,7 @@
 .services-cards-container .services-card h2{
     font-size: 24px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff50d0;
+    color: #D4AF37;
     padding-bottom: 50px;
 }
 
@@ -43,10 +43,10 @@
 .services-cards-container .services-card button{
     margin-top: 30px;
     padding: 10px 20px;
-    border: 3px solid #ff50d0;
+    border: 3px solid #D4AF37;
     border-radius: 50px;
     background-color: transparent;
-    color: #ff50d0;
+    color: #D4AF37;
     font-size: 16px;
     font-weight: 600;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -55,7 +55,7 @@
 }
 
 .services-cards-container .services-card button:hover{
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     color: #f2f2f2;
 }   
 
