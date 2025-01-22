@@ -15,6 +15,12 @@ export function Login(){
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        
+        if(!email || !password){
+            alert("Please fill in all fields");
+            return;
+        }
+
         axios
           .post("http://localhost:8080/login", { email, password })
           .then((result) => {

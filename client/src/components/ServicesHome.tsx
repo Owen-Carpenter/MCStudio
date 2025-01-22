@@ -1,5 +1,6 @@
 import "../styles/ServicesHome.css"
 import ServiceCard from "./ServiceCard";
+import { Link } from "react-router-dom";
 import DetailedServiceCard from "./DetailedServiceCard";
 
 function ServicesHome(){
@@ -45,9 +46,11 @@ function ServicesHome(){
                         time="45 Min"
                     />
             </div>
-            <button className="services-btn">
-                View More
-            </button>
+            <Link className="services-link" to={"/Services"}>
+                <button className="services-btn">
+                    View More
+                </button>
+            </Link>
         </section>
     </>);
 }

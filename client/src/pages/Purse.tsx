@@ -108,6 +108,7 @@ export function Purse() {
                                             onChange={handleSelectChange}
                                         >
                                             <MenuItem value={0}>No Fill</MenuItem>
+                                            <MenuItem value={0}>Full Set</MenuItem>
                                             <MenuItem value={2}>2 Week Fill</MenuItem>
                                             <MenuItem value={3}>3 Week Fill</MenuItem>
                                             <MenuItem value={4}>4 Week Fill</MenuItem>

@@ -32,8 +32,13 @@
     padding: 10px 0px;
 }
 
-.services-btn {
+.services-link {
+    text-decoration: none;
+}
+
+.services-btn{
     margin: 0 auto;
+    display: block;
     padding: 10px 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
