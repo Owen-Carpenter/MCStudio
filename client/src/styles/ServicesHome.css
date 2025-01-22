@@ -3,12 +3,48 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-image: linear-gradient(125deg, #4a4a4a, #6e6e6e, #9e9e9e, #C9B037, #D1A054, #E4C38A, #F0E68C, #D1A054, #C9B037);    background-size: 400%;
-    animation: backanim 10s infinite;
-    background-size: 400%;
+    background-color: #36454F;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     box-shadow:  0 5px 25px 0 rgba(0, 0, 0, 0.25);
     border-bottom: 3px solid #f2f2f2;
 }
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #D4AF37;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #b6973081,
+    0 0 50px #D4AF37,
+    0 0 100px #D4AF37;
+    animation: animate 15s linear infinite;
+    animation-duration:  calc(100s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: #f8e194;
+    box-shadow: 0 0 0 10px #f8e19481,
+    0 0 50px #f8e194,
+    0 0 100px #f8e194;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(100vh)scale(0);
+    }
+    100%{
+        transform: translateY(-10vh)scale(1);
+    }
+  }
 
 .services-container .card-container {
     display: grid;
@@ -63,7 +99,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #ff50d0; 
+    background-color: #D4AF37; 
     transition: left 0.3s ease;
     z-index: -1; 
 }
@@ -76,14 +112,3 @@
     left: 0; 
 }
 
-@keyframes backanim {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }

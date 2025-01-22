@@ -4,10 +4,20 @@ import DetailedServiceCard from "../components/DetailedServiceCard";
 import Footer from "../components/Footer";
 
 export function Lashes(){
+
+    const spans = Array.from({ length: 15 }, (_, i) => (
+        <span key={i} style={{ "--i": Math.floor(Math.random() * 15) + 1 } as React.CSSProperties}></span>
+    ));
+
     return(
         <>
             <Navbar />
             <section className="facials-services-container">
+                <div className="bubbles">
+                    {spans}
+                    {spans}
+                    {spans}
+                </div>
                 <h1 className="facials-services-title">Lashes Offered</h1>
                 <div className="card-container">
                     <DetailedServiceCard

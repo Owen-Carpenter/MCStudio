@@ -5,10 +5,19 @@ import { faUser, faUsers, faHandHoldingHeart, faHandshake } from '@fortawesome/f
 
 
 function AboutValues(){
+
+    const spans = Array.from({ length: 15 }, (_, i) => (
+        <span key={i} style={{ "--i": Math.floor(Math.random() * 15) + 1 } as React.CSSProperties}></span>
+    ));
+
     return(
         <>
             <section className="about-values">
                 <div className="about-values-content">
+                    <div className="bubbles">
+                        {spans}
+                        {spans}
+                    </div>
                     <h1><span className='h1-span'>Our</span>Values</h1>
                     <div className="about-values-card">
                         <div className="card-icon">

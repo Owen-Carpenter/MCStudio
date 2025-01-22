@@ -4,8 +4,17 @@ import { Link } from "react-router-dom";
 import DetailedServiceCard from "./DetailedServiceCard";
 
 function ServicesHome(){
+    const spans = Array.from({ length: 15 }, (_, i) => (
+        <span key={i} style={{ "--i": Math.floor(Math.random() * 15) + 1 } as React.CSSProperties}></span>
+    ));
+
     return(<>
         <section className="home-page-services services-container">
+            <div className="bubbles">
+                {spans}
+                {spans}
+                {spans}
+            </div>
             <div className="services-text-container">
                 <h1>Best Selling Services</h1>
             </div>

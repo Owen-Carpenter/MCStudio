@@ -9,6 +9,10 @@ function HomeReviews() {
   const [cardCounter, setCardCounter] = useState(0);
   const [numCardsToDisplay, setNumCardsToDisplay] = useState(3);
 
+  const spans = Array.from({ length: 15 }, (_, i) => (
+    <span key={i} style={{ "--i": Math.floor(Math.random() * 15) + 1 } as React.CSSProperties}></span>
+  ));
+
   //update num cards on screen
   const updateScreenSize = () => {
     const screenWidth = window.innerWidth;
@@ -48,6 +52,11 @@ function HomeReviews() {
 
   return (
     <section className="reviews-container">
+      <div className="bubbles">
+        {spans}
+        {spans}
+        {spans}
+      </div>
       <div className="reviews-title">
         <h1>Reviews</h1>
       </div>

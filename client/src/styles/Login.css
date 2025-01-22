@@ -42,17 +42,17 @@
     margin-top: 20px;
     border-radius: 10px;
     background-color: transparent;
-    border: 1px solid #ff50d0;
+    border: 1px solid #D4AF37;
     font-size: 16px;
     font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff50d0;
+    color: #D4AF37;
     font-weight: 600;
     transition: .3s ease;
 }
 
 .login-container button:hover{
-    background-color: #ff50d0;
+    background-color: #D4AF37;
     color: white;
 }
 
@@ -158,7 +158,7 @@
 .login-container h1 {
     font-size: 30px;
     font-weight: 600;
-    color: #ff50d0;
+    color: #D4AF37;
     margin: 10px 0;
 }
 
@@ -178,6 +178,6 @@
 }
 
 .login-container span:hover {
-    color: #ff50d0;
+    color: #D4AF37;
     text-decoration: underline;
 }
