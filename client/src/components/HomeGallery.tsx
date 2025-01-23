@@ -1,4 +1,5 @@
 import '../styles/HomeGallery.css';
+import '../styles/bubbles.css'
 
 function HomeGallery(){
 

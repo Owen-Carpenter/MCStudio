@@ -11,41 +11,6 @@
     border-bottom: 3px solid #f2f2f2;
 }
 
-.bubbles{
-  position: relative;
-  display: flex;
-}
-
-.bubbles span{
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: #D4AF37;
-  margin: 0 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px #b6973081,
-  0 0 50px #D4AF37,
-  0 0 100px #D4AF37;
-  animation: animate 15s linear infinite;
-  animation-duration:  calc(100s / var(--i));
-}
-
-.bubbles span:nth-child(even){
-  background: #f8e194;
-  box-shadow: 0 0 0 10px #f8e19481,
-  0 0 50px #f8e194,
-  0 0 100px #f8e194;
-}
-
-@keyframes animate {
-  0%{
-      transform: translateY(100vh)scale(0);
-  }
-  100%{
-      transform: translateY(-10vh)scale(1);
-  }
-}
-
 .gallery-text{
     font-size: 24px;
     font-family: Georgia, 'Times New Roman', Times, serif;

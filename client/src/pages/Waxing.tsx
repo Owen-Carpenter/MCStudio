@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import "../styles/Facials.css";
 import DetailedServiceCard from "../components/DetailedServiceCard";
 import Footer from "../components/Footer";
+import "../styles/bubbles.css";
 
 export function Waxing(){
 
