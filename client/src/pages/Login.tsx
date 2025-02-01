@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
 export function Login(){
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
@@ -16,13 +16,13 @@ export function Login(){
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
-        if(!email || !password){
+        if(!username || !password){
             alert("Please fill in all fields");
             return;
         }
 
         axios
-          .post("http://localhost:8080/login", { email, password })
+          .post("http://localhost:8080/auth", { username, password })
           .then((result) => {
             if (result.data.message === "Login successful") {
               localStorage.setItem("isAuthenticated", "true");
@@ -47,8 +47,8 @@ export function Login(){
                     <h1>Login</h1>
                     <form  onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" onChange={(e) => setEmail(e.target.value)} />
+                            <label htmlFor="username">Username</label>
+                            <input type="username" id="username" name="username" onChange={(e) => setUsername(e.target.value)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>

@@ -7,7 +7,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export function SignUp() {
-    const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -18,7 +18,7 @@ export function SignUp() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if(!name || !email || !password || !confirmPassword){
+        if(!username || !email || !password || !confirmPassword){
             alert("Please fill in all fields");
             return;
         }
@@ -28,7 +28,7 @@ export function SignUp() {
             return;
         }
 
-        axios.post('http://localhost:8080/register', {name, email, password})
+        axios.post('http://localhost:8080/register', {username, email, password})
         .then(result => {
             console.log(result);
             navigate('/login');
@@ -51,7 +51,7 @@ export function SignUp() {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" onChange={(e) => setName(e.target.value)} />
+                            <input type="text" id="name" name="username" onChange={(e) => setUsername(e.target.value)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>

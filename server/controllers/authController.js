@@ -1,6 +1,9 @@
 import BookingModel from "../models/booking.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const handleLogin = {
     login: async (req, res) => {
@@ -36,11 +39,12 @@ const handleLogin = {
 
                 // Send refresh token as a cookie and access token as a response
                 res.cookie('jwt', refreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
-                res.json({ accessToken });
+                res.json({ 'message': 'Login successful', accessToken });
             } else {
                 res.sendStatus(401); // Unauthorized
             }
         } catch (err) {
+            console.error("Login error:", err);
             res.status(500).json({ 'message': err.message });
         }
     }

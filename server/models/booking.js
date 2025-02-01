@@ -13,6 +13,7 @@ const bookingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  refreshToken: String,
   notifications: [
     {
       _id: {
