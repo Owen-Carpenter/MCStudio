@@ -1,4 +1,4 @@
-import BookingModel from "../models/booking";
+import BookingModel from "../models/booking.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 

@@ -2,9 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
-import User from "./models/booking.js";
-import handleLogin from "./controllers/authController.js";
-import handleNewUser from "./controllers/registerController.js";
+import registerRoutes from './routes/register.js';
+import authRoutes from './routes/auth.js';
 
 dotenv.config();
 
@@ -20,10 +19,8 @@ mongoose.connect(URI);
 const app = express();
 app.use(express.json());
 app.use(cors());
-
-app.post('/login', handleLogin.login);
-
-app.post('/register', handleNewUser.register);
+app.use('/auth', authRoutes);
+app.use('/register', registerRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
